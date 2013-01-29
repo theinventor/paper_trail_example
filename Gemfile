@@ -24,6 +24,10 @@ gem 'jquery-rails'
 
 gem 'paper_trail', '2.7.0'
 
+group :development do
+  gem 'pry'
+end
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
