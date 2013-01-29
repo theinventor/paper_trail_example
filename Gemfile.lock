@@ -108,7 +108,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
-  paper_trail
+  paper_trail (= 2.7.0)
   rails (= 3.2.6)
   sass-rails (~> 3.2.3)
   sqlite3

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130129181057) do
+ActiveRecord::Schema.define(:version => 20130129185537) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -20,5 +20,18 @@ ActiveRecord::Schema.define(:version => 20130129181057) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "versions", :force => true do |t|
+    t.string   "item_type",    :null => false
+    t.integer  "item_id",      :null => false
+    t.string   "event",        :null => false
+    t.string   "whodunnit"
+    t.string   "ip"
+    t.string   "some_user_id"
+    t.text     "object"
+    t.datetime "created_at"
+  end
+
+  add_index "versions", ["item_type", "item_id"], :name => "index_versions_on_item_type_and_item_id"
 
 end
